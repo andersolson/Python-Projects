@@ -2,6 +2,8 @@
 
 import numpy as np
 
+# Obfuscate Intent
+
 intention = input("What is your intention?: ")
 
 vowels = ['A','E','I','O','U',' ']
@@ -23,7 +25,7 @@ def removeDuplicate(str):
 removeDuplicate(capIntention)
 
 
-
+# Manifest Sigil
 
 sigilValues = [1,2,3,4,5,6,7,8,9]
 
