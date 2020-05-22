@@ -2,6 +2,29 @@
 
 import numpy as np
 
+intention = input("What is your intention?: ")
+
+vowels = ['A','E','I','O','U',' ']
+
+capIntention = intention.upper()
+
+for i in vowels:
+    capIntention = capIntention.replace(i,'')
+
+def removeDuplicate(str):
+    t = ""
+    for i in str:
+        if (i in t):
+            pass
+        else:
+            t = t + i
+    print("\nObfuscation:", t)
+
+removeDuplicate(capIntention)
+
+
+
+
 sigilValues = [1,2,3,4,5,6,7,8,9]
 
 sigilLetters = ['A','B','C','D','E','F','G','H','I',
@@ -30,3 +53,4 @@ print('Randomized Sigil Grid:\n'\
       '| {3} | {4} | {5} |\n'\
       '| {6} | {7} | {8} |\n'\
       '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[0][2], sigilGrid[1][0], sigilGrid[1][1], sigilGrid[1][2], sigilGrid[2][0], sigilGrid[2][1], sigilGrid[2][2]))
+
