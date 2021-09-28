@@ -1,5 +1,6 @@
-import matplotlib.pylplot as plt
+import matplotlib.pyplot as plt
 
+'''
 edges = [(0,1), (2,3), (3,0), (2,1)]
 
 x = [-5, 0, 5, 0]
@@ -17,4 +18,4 @@ plt.figure()
 plt.plot(x, y, 'ro')
 plt.plot(lx, ly, '-', color='#000000')
 plt.show()
-
+'''
