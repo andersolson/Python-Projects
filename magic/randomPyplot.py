@@ -1,11 +1,11 @@
+import matplotlib.pyplot as plt
+
 # Random Sigil Grid Generator
 
 import numpy as np
 
-
-'''Obfuscate the Intent'''
 # Prompt user input
-intention = input("What is your intention?: ")
+intention = "catch more trout"
 
 vowels = ['A','E','I','O','U',' ']
 
@@ -16,7 +16,7 @@ capIntention = intention.upper()
 for i in vowels:
     capIntention = capIntention.replace(i,'')
 
-# Delete duplicates
+# Obfuscate the Intent
 def removeDuplicate(str):
     t = ""
     for i in str:
@@ -30,7 +30,6 @@ removeDuplicate(capIntention)
 
 
 # Manifest Sigil
-
 sigilValues = [1,2,3,4,5,6,7,8,9]
 
 sigilLetters = ['A','B','C','D','E','F','G','H','I',
@@ -41,6 +40,35 @@ sigilLetters = ['A','B','C','D','E','F','G','H','I',
 sigilTableHeader = np.random.choice(sigilValues, 9, False)
 sigilTableBody = np.random.choice(sigilLetters, (3,9), False)
 
+print(sigilTableHeader)
+print(sigilTableBody)
+
+# Nested list representation of codex
+codex = []
+
+# Nested codex values and letters
+for x in range(0,9):
+
+    nest = []
+    nest.append(sigilTableHeader[x])
+    nest.append(sigilTableBody[0][x])
+    nest.append(sigilTableBody[1][x])
+    nest.append(sigilTableBody[2][x])
+    codex.append(nest)
+
+print('\n{0}\n'.format(codex))
+
+def find_in_heart_of_hearts(mylist, char):
+    for sub_list in mylist:
+        if char in sub_list:
+            print(mylist.index(sub_list), sub_list.index(char))
+    raise ValueError("'{char}' is not in list".format(char = char))
+
+for letter in :
+find_in_heart_of_hearts(codex, 'C')
+
+# Display matrices
+'''
 print('\nRandomized Sigil Table:\n'\
       '=====================================\n'\
       '| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |\n'\
@@ -63,5 +91,4 @@ print('Randomized Sigil Grid:\n'\
       '| {6} | {7} | {8} |\n'\
       '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[0][2], sigilGrid[1][0], sigilGrid[1][1], sigilGrid[1][2], sigilGrid[2][0], sigilGrid[2][1], sigilGrid[2][2]))
 
-
-
+'''
