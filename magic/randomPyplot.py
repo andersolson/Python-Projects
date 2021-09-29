@@ -24,7 +24,7 @@ def removeDuplicate(str):
             pass
         else:
             t = t + i
-    print("\nObfuscation:", t)
+    print("\nObfuscation:", t, "\n")
     return t
 
 phrase = removeDuplicate(capIntention)
