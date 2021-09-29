@@ -25,8 +25,9 @@ def removeDuplicate(str):
         else:
             t = t + i
     print("\nObfuscation:", t)
+    return t
 
-removeDuplicate(capIntention)
+phrase = removeDuplicate(capIntention)
 
 
 # Manifest Sigil
@@ -64,8 +65,9 @@ def find_in_heart_of_hearts(mylist, char):
             print(mylist.index(sub_list), sub_list.index(char))
     raise ValueError("'{char}' is not in list".format(char = char))
 
-for letter in :
-find_in_heart_of_hearts(codex, 'C')
+for letter in phrase:
+    print(letter)
+    #find_in_heart_of_hearts(codex, 'C')
 
 # Display matrices
 '''
