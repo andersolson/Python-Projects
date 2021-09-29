@@ -41,8 +41,8 @@ sigilLetters = ['A','B','C','D','E','F','G','H','I',
 sigilTableHeader = np.random.choice(sigilValues, 9, False)
 sigilTableBody = np.random.choice(sigilLetters, (3,9), False)
 
-print(sigilTableHeader)
-print(sigilTableBody)
+#print(sigilTableHeader)
+#print(sigilTableBody)
 
 # Nested list representation of codex
 codex = []
@@ -57,20 +57,21 @@ for x in range(0,9):
     nest.append(sigilTableBody[2][x])
     codex.append(nest)
 
-print('\n{0}\n'.format(codex))
+#print('\n{0}\n'.format(codex))
 
+# Define a function for locating letter position in the codex
 def find_in_heart_of_hearts(mylist, char):
     for sub_list in mylist:
         if char in sub_list:
-            print(mylist.index(sub_list), sub_list.index(char))
-    raise ValueError("'{char}' is not in list".format(char = char))
+            #print(mylist.index(sub_list), sub_list.index(char))
+            print(mylist.index(sub_list))
+            return (mylist.index(sub_list))
 
+# Find the grid position of letters in the codex
 for letter in phrase:
-    print(letter)
-    #find_in_heart_of_hearts(codex, 'C')
+    find_in_heart_of_hearts(codex,letter)
 
 # Display matrices
-'''
 print('\nRandomized Sigil Table:\n'\
       '=====================================\n'\
       '| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |\n'\
@@ -92,5 +93,3 @@ print('Randomized Sigil Grid:\n'\
       '| {3} | {4} | {5} |\n'\
       '| {6} | {7} | {8} |\n'\
       '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[0][2], sigilGrid[1][0], sigilGrid[1][1], sigilGrid[1][2], sigilGrid[2][0], sigilGrid[2][1], sigilGrid[2][2]))
-
-'''
