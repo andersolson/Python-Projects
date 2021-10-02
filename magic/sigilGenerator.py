@@ -31,7 +31,8 @@ print("\nObfuscation:", phrase, "\n")
 
 # Prompt user input for line width
 lineW = input("Input sigil line width: ")
-markerW = 2 * lineW
+markerW = 1.50 * float(lineW)
+
 
 # Create a reference table and a grid for the sigil
 sigilValues = [1,2,3,4,5,6,7,8,9]
