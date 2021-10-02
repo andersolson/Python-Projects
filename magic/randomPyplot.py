@@ -4,12 +4,11 @@ import numpy as np
 # Prompt user input
 intention = "I need to go beer"
 
-vowels = ['A','E','I','O','U',' ']
-
 # Capitalize the input
 capIntention = intention.upper()
 
 # Remove the vowels
+vowels = ['A','E','I','O','U',' ']
 for i in vowels:
     capIntention = capIntention.replace(i,'')
 
@@ -21,13 +20,13 @@ def removeDuplicate(str):
             pass
         else:
             t = t + i
-    print("\nObfuscation:", t, "\n")
     return t
 
+# Define a variable for the obfuscated intent
 phrase = removeDuplicate(capIntention)
+print("\nObfuscation:", phrase, "\n")
 
-
-# Manifest Sigil
+# Create a reference table and a grid for the sigil
 sigilValues = [1,2,3,4,5,6,7,8,9]
 
 sigilLetters = ['A','B','C','D','E','F','G','H','I',
@@ -41,36 +40,44 @@ sigilTableBody = np.random.choice(sigilLetters, (3,9), False)
 #print(sigilTableHeader)
 #print(sigilTableBody)
 
-# Nested list representation of codex
-codex = []
+# Nested list representation of the reference table
+refTable = []
 
-# Nested codex values and letters
+# Nested list of number values and letters
 for x in range(0,9):
-
     nest = []
     nest.append(sigilTableHeader[x])
     nest.append(sigilTableBody[0][x])
     nest.append(sigilTableBody[1][x])
     nest.append(sigilTableBody[2][x])
-    codex.append(nest)
+    refTable.append(nest)
 
-#print(codex)
+print('Reference table as list:\n',refTable,"\n")
 #print('\n{0}\n'.format(codex))
 
-# Define a function for locating letter position in the codex
+# Define a function for locating letter position in the reference table
 def find_in_heart_of_hearts(mylist, char):
     for sub_list in mylist:
         if char in sub_list:
             #print(mylist.index(sub_list), sub_list.index(char))
-            print(mylist.index(sub_list))
+            #print(mylist.index(sub_list))
             return (mylist.index(sub_list))
 
-# Find the sigil position of letters in the codex
+# Store the sigil position of letters in a list
+refLst = []
 for letter in phrase:
-    find_in_heart_of_hearts(codex,letter)
+    refLst.append(find_in_heart_of_hearts(refTable,letter))
+print('Letter position in reference table:\n',refLst,'\n')
+
+# Get a list of the numbers linked to the letters
+numberLst =[]
+for i in refLst:
+    #print(refTable[i][0])
+    numberLst.append(refTable[i][0])
+print('Number associated with letter:\n',numberLst,'\n')
 
 # Display matrices
-print('\nRandomized Sigil Table:\n'\
+print('Randomized Sigil Table:\n'\
       '=====================================\n'\
       '| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |\n'\
       '|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n'\
@@ -93,10 +100,6 @@ print('Randomized Sigil Grid:\n'\
       '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[0][2], sigilGrid[1][0], sigilGrid[1][1], sigilGrid[1][2], sigilGrid[2][0], sigilGrid[2][1], sigilGrid[2][2]))
 
 # List for tracking the order of numbers in the sigil grid
-#gridNum = []
-#for i in codex:
-#    gridNum.append(i[0])
-#print(gridNum)
 gridNum = []
 gridNum.append(sigilGrid[0][0])
 gridNum.append(sigilGrid[0][1])
@@ -107,13 +110,20 @@ gridNum.append(sigilGrid[1][2])
 gridNum.append(sigilGrid[2][0])
 gridNum.append(sigilGrid[2][1])
 gridNum.append(sigilGrid[2][2])
-print(gridNum)
+print('Sigil Grid as a list:\n', gridNum)
 
+# Get index location of number in the sigil grid
+for i in numberLst:
+    print(i)
+
+
+'''
 xLst = []
 yLst = []
 
-for i in codex:
-    position = gridNum.index(i[0])
+for i in refLst:
+    position = i
+    print(i)
     if position == 0:
         xLst.append(1)
         yLst.append(3)
@@ -159,3 +169,4 @@ plt.plot(xLst, yLst, 'o', color='black')
 
 plt.plot(xLst, yLst, '-ok')
 plt.show()
+'''
