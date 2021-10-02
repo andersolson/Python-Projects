@@ -74,6 +74,7 @@ numberLst =[]
 for i in refLst:
     #print(refTable[i][0])
     numberLst.append(refTable[i][0])
+print('Number associated with letter:\n',numberLst,'\n')
 
 # Display matrices
 print('Randomized Sigil Table:\n'\
@@ -97,8 +98,6 @@ print('Randomized Sigil Grid:\n'\
       '| {3} | {4} | {5} |\n'\
       '| {6} | {7} | {8} |\n'\
       '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[0][2], sigilGrid[1][0], sigilGrid[1][1], sigilGrid[1][2], sigilGrid[2][0], sigilGrid[2][1], sigilGrid[2][2]))
-
-print('\nNumber associated with letter:\n',numberLst,'\n')
 
 # List for tracking the order of numbers in the sigil grid
 gridNum = []
