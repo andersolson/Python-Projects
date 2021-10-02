@@ -74,7 +74,6 @@ numberLst =[]
 for i in refLst:
     #print(refTable[i][0])
     numberLst.append(refTable[i][0])
-print('Number associated with letter:\n',numberLst,'\n')
 
 # Display matrices
 print('Randomized Sigil Table:\n'\
@@ -99,6 +98,8 @@ print('Randomized Sigil Grid:\n'\
       '| {6} | {7} | {8} |\n'\
       '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[0][2], sigilGrid[1][0], sigilGrid[1][1], sigilGrid[1][2], sigilGrid[2][0], sigilGrid[2][1], sigilGrid[2][2]))
 
+print('\nNumber associated with letter:\n',numberLst,'\n')
+
 # List for tracking the order of numbers in the sigil grid
 gridNum = []
 gridNum.append(sigilGrid[0][0])
@@ -110,63 +111,61 @@ gridNum.append(sigilGrid[1][2])
 gridNum.append(sigilGrid[2][0])
 gridNum.append(sigilGrid[2][1])
 gridNum.append(sigilGrid[2][2])
-print('Sigil Grid as a list:\n', gridNum)
+#print('Sigil Grid as a list:\n', gridNum)
 
 # Get index location of number in the sigil grid
+sigilLocation = []
 for i in numberLst:
-    print(i)
+    #print('Number is: ', i)
+    sigilLocation.append(gridNum.index(i))
+#print(sigilLocation)
 
 
-'''
 xLst = []
 yLst = []
 
-for i in refLst:
-    position = i
-    print(i)
+for position in sigilLocation:
     if position == 0:
         xLst.append(1)
         yLst.append(3)
-        print("x,y = 1,3")
+        #print("x,y = 1,3")
     elif position == 1:
         xLst.append(2)
         yLst.append(3)
-        print("x,y = 2,3")
+        #print("x,y = 2,3")
     elif position == 2:
         xLst.append(3)
         yLst.append(3)
-        print("x,y = 3,3")
+        #print("x,y = 3,3")
     elif position == 3:
         xLst.append(1)
         yLst.append(2)
-        print("x,y = 1,2")
+        #print("x,y = 1,2")
     elif position == 4:
         xLst.append(2)
         yLst.append(2)
-        print("x,y = 2,2")
+        #print("x,y = 2,2")
     elif position == 5:
         xLst.append(3)
         yLst.append(2)
-        print("x,y = 3,2")
+        #print("x,y = 3,2")
     elif position == 6:
         xLst.append(1)
         yLst.append(1)
-        print("x,y = 1,1")
+        #print("x,y = 1,1")
     elif position == 7:
         xLst.append(2)
         yLst.append(1)
-        print("x,y = 2,1")
+        #print("x,y = 2,1")
     elif position == 8:
         xLst.append(3)
         yLst.append(1)
-        print("x,y = 3,1")
+        #print("x,y = 3,1")
     else:
         print("Error: index out of range")
+#print(xLst, yLst)
 
-print(xLst, yLst)
-
+plt.figure(figsize=(9,9))
 plt.plot(xLst, yLst, 'o', color='black')
-
 plt.plot(xLst, yLst, '-ok')
 plt.show()
-'''
