@@ -29,6 +29,10 @@ def removeDuplicate(str):
 phrase = removeDuplicate(capIntention)
 print("\nObfuscation:", phrase, "\n")
 
+# Prompt user input for line width
+lineW = input("Input sigil line width: ")
+markerW = 2 * lineW
+
 # Create a reference table and a grid for the sigil
 sigilValues = [1,2,3,4,5,6,7,8,9]
 
@@ -79,7 +83,7 @@ for i in refLst:
 #print('Number associated with letter:\n',numberLst,'\n')
 
 # Display matrices
-print('Randomized Sigil Table:\n'\
+print('\nRandomized Sigil Table:\n'\
       '=====================================\n'\
       '| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |\n'\
       '|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n'\
@@ -169,6 +173,6 @@ for position in sigilLocation:
 #print(xLst, yLst)
 
 plt.figure(figsize=(9,9))
-plt.plot(xLst, yLst, 'o', color='black')
-plt.plot(xLst, yLst, '-ok')
+#plt.plot(xLst, yLst, 'o', color='black', markevery=[0,-1])
+plt.plot(xLst, yLst, '-ok', color='black', linewidth=lineW, markevery=[0,-1], markersize=markerW)
 plt.show()
