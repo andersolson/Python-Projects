@@ -43,6 +43,7 @@ def outputError(msg):
     msg
     arcpy.AddError(msg)
 
+'''
 # Set the overwriteOutput ON
 arcpy.gp.overwriteOutput = True
 
@@ -195,3 +196,4 @@ if arcpy.Exists(buff_W):
         arcpy.AddError(ex.args[0])
 
 return
+'''
