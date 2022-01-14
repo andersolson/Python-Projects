@@ -175,6 +175,5 @@ for position in sigilLocation:
 
 plt.figure(figsize=(9,9))
 #plt.plot(xLst, yLst, 'o', color='black', markevery=[0,-1])
-plt.plot(xLst, yLst, '-ok', color='black', linewidth=lineW, markevery=[0,-1], markersize=markerW,
-         set_solid_capstyle='butt')
+plt.plot(xLst, yLst, '-ok', solid_capstyle="butt", solid_joinstyle="miter", color='black', linewidth=lineW, markevery=[0,-1], markersize=markerW)
 plt.show()
