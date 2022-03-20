@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt
 
-plt.rcParams["figure.figsize"] = [7.50, 3.50]
+plt.rcParams["figure.figsize"] = [9, 9]
 plt.rcParams["figure.autolayout"] = True
 
-x = [3, 1, 2, 5]
-y = [5, 2, 4, 7]
+x = [9, 13, 15, 14, 11, 7, 4, 3, 5]
+y = [15, 14, 10, 6, 3, 3, 6, 10, 14]
 
-plt.plot(x, y, 'r*')
-plt.axis([0, 6, 0, 20])
+plt.plot(x, y,'o')
+plt.axis([0, 18, 0, 18])
 
 for i, j in zip(x, y):
    plt.text(i, j+0.5, '({}, {})'.format(i, j))
