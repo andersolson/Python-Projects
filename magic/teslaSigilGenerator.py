@@ -134,40 +134,40 @@ yLst = []
 
 for position in sigilLocation:
     if position == 0:
-        xLst.append(1)
-        yLst.append(3)
+        xLst.append(9)
+        yLst.append(15)
         #print("x,y = 1,3")
     elif position == 1:
-        xLst.append(2)
-        yLst.append(3)
+        xLst.append(13)
+        yLst.append(14)
         #print("x,y = 2,3")
     elif position == 2:
-        xLst.append(3)
-        yLst.append(3)
+        xLst.append(15)
+        yLst.append(10)
         #print("x,y = 3,3")
     elif position == 3:
-        xLst.append(1)
-        yLst.append(2)
+        xLst.append(14)
+        yLst.append(6)
         #print("x,y = 1,2")
     elif position == 4:
-        xLst.append(2)
-        yLst.append(2)
+        xLst.append(11)
+        yLst.append(3)
         #print("x,y = 2,2")
     elif position == 5:
-        xLst.append(3)
-        yLst.append(2)
+        xLst.append(7)
+        yLst.append(3)
         #print("x,y = 3,2")
     elif position == 6:
-        xLst.append(1)
-        yLst.append(1)
+        xLst.append(4)
+        yLst.append(6)
         #print("x,y = 1,1")
     elif position == 7:
-        xLst.append(2)
-        yLst.append(1)
+        xLst.append(3)
+        yLst.append(10)
         #print("x,y = 2,1")
     elif position == 8:
-        xLst.append(3)
-        yLst.append(1)
+        xLst.append(5)
+        yLst.append(14)
         #print("x,y = 3,1")
     else:
         print("Error: index out of range")
@@ -175,9 +175,9 @@ for position in sigilLocation:
 
 plt.figure(figsize=(9,9))
 #plt.plot(xLst, yLst, 'o', color='black', markevery=[0,-1])
-#plt.plot(xLst, yLst, '-ok', solid_capstyle="projecting", solid_joinstyle="miter",
-#         color='black', linewidth=lineW, markevery=[0,-1], markersize=markerW)
-plt.plot(xLst, yLst, solid_capstyle="projecting", solid_joinstyle="miter",
-         color='black', linewidth=lineW)
+plt.plot(xLst, yLst, '-ok', solid_capstyle="projecting", solid_joinstyle="miter",
+         color='black', linewidth=lineW, markevery=[0,-1], markersize=markerW)
+#plt.plot(xLst, yLst, solid_capstyle="projecting", solid_joinstyle="miter",
+#         color='black', linewidth=lineW)
 plt.margins(0.25)
 plt.show()
