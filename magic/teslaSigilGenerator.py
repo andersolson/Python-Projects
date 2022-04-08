@@ -119,7 +119,7 @@ print('Randomized Sigil Grid:\n'\
       '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[0][2], sigilGrid[1][0], sigilGrid[1][1], sigilGrid[1][2], sigilGrid[2][0], sigilGrid[2][1], sigilGrid[2][2]))
 
 print('\nNumber associated with letter:\n',numberLst,'\n')
-print('Duplicate number associations:\n',dupes,'\n')
+#print('Duplicate number associations:\n',dupes,'\n')
 
 # List for tracking the order of numbers in the sigil grid
 gridNum = []
@@ -204,7 +204,7 @@ plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
 # Plot grid points with a 9-pointed star marker
 plt.scatter(x, y, color='red', marker=(9,1), zorder=2)
 
-plt.margins(0.15)
+plt.margins(0.20)
 #plt.margins(0.25)
 #plt.margins(0.50)
 plt.axis('off')
