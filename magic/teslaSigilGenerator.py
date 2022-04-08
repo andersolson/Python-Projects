@@ -83,6 +83,18 @@ for i in refLst:
     numberLst.append(refTable[i][0])
 #print('Number associated with letter:\n',numberLst,'\n')
 
+'''
+# Get a list of duplicate numbers in sigil grid
+seen = set()
+dupes = []
+for x in numberLst:
+    if x in seen:
+        dupes.append(x)
+    else:
+        seen.add(x)
+#print('Duplicate number associations:\n',dupes,'\n')
+'''
+
 # Display matrices
 print('\nRandomized Sigil Table:\n'\
       '=====================================\n'\
@@ -107,6 +119,7 @@ print('Randomized Sigil Grid:\n'\
       '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[0][2], sigilGrid[1][0], sigilGrid[1][1], sigilGrid[1][2], sigilGrid[2][0], sigilGrid[2][1], sigilGrid[2][2]))
 
 print('\nNumber associated with letter:\n',numberLst,'\n')
+print('Duplicate number associations:\n',dupes,'\n')
 
 # List for tracking the order of numbers in the sigil grid
 gridNum = []
@@ -173,11 +186,26 @@ for position in sigilLocation:
         print("Error: index out of range")
 #print(xLst, yLst)
 
+# Tesla vortex coordinates
+x = [9, 13, 15, 14, 11, 7, 4, 3, 5]
+y = [15, 14, 10, 6, 3, 3, 6, 10, 14]
+l = [9, 1, 2, 3, 4, 5, 6, 7, 8]
+
 plt.figure(figsize=(9,9))
+
 #plt.plot(xLst, yLst, 'o', color='black', markevery=[0,-1])
-plt.plot(xLst, yLst, '-ok', solid_capstyle="projecting", solid_joinstyle="miter",
-         color='black', linewidth=lineW, markevery=[0], markersize=markerW)
+
 #plt.plot(xLst, yLst, solid_capstyle="projecting", solid_joinstyle="miter",
 #         color='black', linewidth=lineW)
-plt.margins(0.25)
+
+plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
+         color='black', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
+
+# Plot grid points with a 9-pointed star marker
+plt.scatter(x, y, color='red', marker=(9,1), zorder=2)
+
+plt.margins(0.15)
+#plt.margins(0.25)
+#plt.margins(0.50)
+plt.axis('off')
 plt.show()
