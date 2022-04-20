@@ -5,7 +5,8 @@ import numpy as np
 
 '''Obfuscate the Intent'''
 # Prompt user input
-intention = input("What is your intention?: ")
+#intention = input("What is your intention?: ")
+intention = "my flies attract big trout"
 
 # Capitalize the input
 capIntention = intention.upper()
