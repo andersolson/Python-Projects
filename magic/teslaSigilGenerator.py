@@ -189,7 +189,6 @@ for position in sigilLocation:
 # Tesla vortex coordinates
 x = [9, 13, 15, 14, 11, 7, 4, 3, 5]
 y = [15, 14, 10, 6, 3, 3, 6, 10, 14]
-l = [9, 1, 2, 3, 4, 5, 6, 7, 8]
 
 plt.figure(figsize=(9,9))
 
@@ -203,6 +202,26 @@ plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
 
 # Plot grid points with a 9-pointed star marker
 plt.scatter(x, y, color='red', marker=(9,1), zorder=2)
+
+# text is 9
+plt.text(9,15.25,'9',horizontalalignment='center',verticalalignment='center_baseline',fontsize=12,color='red')
+# text is 1
+plt.text(13.25,14.25,'1',horizontalalignment='center',verticalalignment='center_baseline',fontsize=12,color='red')
+# text is 2
+plt.text(15.25,10,'2',horizontalalignment='center',verticalalignment='center_baseline',fontsize=12,color='red')
+# text is 3
+plt.text(14.25,5.75,'3',horizontalalignment='center',verticalalignment='center_baseline',fontsize=12,color='red')
+# text is 4
+plt.text(11,2.75,'4',horizontalalignment='center',verticalalignment='center_baseline',fontsize=12,color='red')
+# text is 5
+plt.text(7,2.75,'5',horizontalalignment='center',verticalalignment='center_baseline',fontsize=12,color='red')
+# text is 6
+plt.text(3.75,5.75,'6',horizontalalignment='center',verticalalignment='center_baseline',fontsize=12,color='red')
+# text is 7
+plt.text(2.75,10,'7',horizontalalignment='center',verticalalignment='center_baseline',fontsize=12,color='red')
+# text is 8
+plt.text(4.75,14.25,'8',horizontalalignment='center',verticalalignment='center_baseline',fontsize=12,color='red')
+
 
 plt.margins(0.20)
 #plt.margins(0.25)
