@@ -5,8 +5,8 @@ import numpy as np
 
 '''Obfuscate the Intent'''
 # Prompt user input
-#intention = input("What is your intention?: ")
-intention = "my flies attract big trout"
+intention = input("What is your intention?: ")
+#intention = "my flies attract big trout"
 
 # Capitalize the input
 capIntention = intention.upper()
@@ -32,6 +32,7 @@ print("\nObfuscation:", phrase, "\n")
 
 # Prompt user input for line width
 lineW = input("Input sigil line width: ")
+#lineW = 30
 markerW = 1.50 * float(lineW)
 
 
