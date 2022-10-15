@@ -184,6 +184,13 @@ def createTeslaSigil(intent, output):
 intention = input("What is your intention?: ")
 #intention = "my flies attract big trout"
 
+# Prompt user input for line width
+lineW = input("Input sigil line width: ")
+markerW = 1.50 * float(lineW)
+
+# Prompt user for output directory
+outPath = input("What is the sigil output location?: ")
+
 # Capitalize the input
 capIntention = intention.upper()
 
@@ -195,13 +202,6 @@ for i in vowels:
 # Define a variable for the obfuscated intent
 phrase = removeDuplicate(capIntention)
 print("\nObfuscation:", phrase, "\n")
-
-# Prompt user input for line width
-lineW = input("Input sigil line width: ")
-markerW = 1.50 * float(lineW)
-
-# Prompt user for output directory
-outPath = input("What is the sigil output location?: ")
 
 # Create a date time stamp for filename
 now      = dt.now()
@@ -215,7 +215,3 @@ for i in range(len(phrase)):
 
     # Call the Tesla function
     createTeslaSigil(phrase,outputImg)
-
-
-
-
