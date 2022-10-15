@@ -177,7 +177,8 @@ plt.figure(figsize=(9,9))
 #plt.plot(xLst, yLst, 'o', color='black', markevery=[0,-1])
 #plt.plot(xLst, yLst, '-ok', solid_capstyle="projecting", solid_joinstyle="miter",
 #         color='black', linewidth=lineW, markevery=[0,-1], markersize=markerW)
-plt.plot(xLst, yLst, solid_capstyle="projecting", solid_joinstyle="miter",
-         color='black', linewidth=lineW)
+plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
+         color='black', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
 plt.margins(0.25)
+plt.axis('off')
 plt.show()
