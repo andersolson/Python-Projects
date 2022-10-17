@@ -167,7 +167,7 @@ def createTeslaSigil(intent, output):
     plt.figure(figsize=(9, 9))
 
     plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
-             color='black', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
+             color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
 
     plt.margins(0.20)
     # plt.margins(0.50)
@@ -316,7 +316,7 @@ def createSquareSigil(intent, output):
 
     plt.figure(figsize=(9, 9))
     plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
-             color='black', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
+             color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
     plt.margins(0.25)
     #plt.margins(0.50)
     plt.axis('off')
@@ -330,18 +330,18 @@ def createSquareSigil(intent, output):
 
 '''Obfuscate the Intent'''
 # Prompt user input
-intention = input("What is your intention?: ")
+intention = input("What is your intention? >>> ")
 #intention = "my flies attract big trout"
 
 # Prompt user input for sigil style 1, 2, or 3
-sigilStyle = input("Choose sigil style:\n\t1 = Square Sigil\n\t2 = Nonagon Sigil")
+sigilStyle = input("Choose sigil style:\n\t1 = Square Sigil\n\t2 = Nonagon Sigil\n\t3 = Both\n>>>")
 
 # Prompt user input for line width
-lineW = input("Input sigil line width: ")
+lineW = input("Input sigil line width: >>>")
 markerW = 1.50 * float(lineW)
 
 # Prompt user for output directory
-outPath = input("What is the sigil output location?: ")
+outPath = input("What is the sigil output location?: >>>")
 
 # Capitalize the input
 capIntention = intention.upper()
@@ -362,14 +362,30 @@ tdy      = now.strftime('%Y%m')
 # Run functions to generate sigil
 for i in range(len(phrase)):
 
-    # Name the output images
-    outputImg = r'{0}\{1}_{2}_{3}'.format(outPath, phrase, tdy, i)
+    if sigilStyle == '1':
+        # Name the output images
+        outputImg = r'{0}\{1}_{2}_{3}'.format(outPath, phrase, tdy, i)
 
-    if sigilStyle == 1:
         # Call Square Sigil function
         createSquareSigil(phrase, outputImg)
-    elif sigilStyle == 2:
+    elif sigilStyle == '2':
+        # Name the output images
+        outputImg = r'{0}\{1}_{2}_{3}'.format(outPath, phrase, tdy, i)
+
         # Call the Tesla function
         createTeslaSigil(phrase,outputImg)
+    elif sigilStyle == '3':
+        # Name the output images
+        outputSqr = r'{0}\square_{1}_{2}_{3}'.format(outPath, phrase, tdy, i)
+
+        # Call Square Sigil function
+        createSquareSigil(phrase, outputSqr)
+
+        # Name the output images
+        outputNona = r'{0}\nonagon_{1}_{2}_{3}'.format(outPath, phrase, tdy, i)
+
+        # Call the Tesla function
+        createTeslaSigil(phrase, outputNona)
+
     else:
         print('ERROR: User input out of range.')
