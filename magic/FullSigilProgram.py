@@ -333,6 +333,9 @@ def createSquareSigil(intent, output):
 intention = input("What is your intention?: ")
 #intention = "my flies attract big trout"
 
+# Prompt user input for sigil style 1, 2, or 3
+sigilStyle = input("Choose sigil style:\n\t1 = Square Sigil\n\t2 = Nonagon Sigil")
+
 # Prompt user input for line width
 lineW = input("Input sigil line width: ")
 markerW = 1.50 * float(lineW)
@@ -362,5 +365,11 @@ for i in range(len(phrase)):
     # Name the output images
     outputImg = r'{0}\{1}_{2}_{3}'.format(outPath, phrase, tdy, i)
 
-    # Call the Tesla function
-    createTeslaSigil(phrase,outputImg)
+    if sigilStyle == 1:
+        # Call Square Sigil function
+        createSquareSigil(phrase, outputImg)
+    elif sigilStyle == 2:
+        # Call the Tesla function
+        createTeslaSigil(phrase,outputImg)
+    else:
+        print('ERROR: User input out of range.')
