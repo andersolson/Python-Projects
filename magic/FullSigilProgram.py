@@ -169,10 +169,11 @@ def createTeslaSigil(intent, output):
     plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
              color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
 
-    #plt.margins(0.20)
-    plt.margins(0.50)
+    plt.margins(0.20)
+    #plt.margins(0.50)
+    #plt.margins(0.70)
+    # plt.tight_layout()
     plt.axis('off')
-    #plt.tight_layout()
     plt.savefig(output,
                 bbox_inches='tight',
                 transparent=True,
@@ -318,10 +319,11 @@ def createSquareSigil(intent, output):
     plt.figure(figsize=(9, 9))
     plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
              color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
-    #plt.margins(0.25)
-    plt.margins(0.50)
-    plt.axis('off')
+    plt.margins(0.25)
+    #plt.margins(0.50)
+    #plt.margins(0.70)
     #plt.tight_layout()
+    plt.axis('off')
     plt.savefig(output,
                 bbox_inches='tight',
                 transparent=True,
