@@ -164,6 +164,7 @@ def createTeslaSigil(intent, output):
     x = [9, 13, 15, 14, 11, 7, 4, 3, 5]
     y = [15, 14, 10, 6, 3, 3, 6, 10, 14]
 
+    plt.rcParams.update({'figure.max_open_warning': 0})
     plt.figure(figsize=(9, 9))
 
     plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
@@ -316,6 +317,7 @@ def createSquareSigil(intent, output):
         else:
             print("Error: index out of range")
 
+    plt.rcParams.update({'figure.max_open_warning': 0})
     plt.figure(figsize=(9, 9))
     plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
              color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
