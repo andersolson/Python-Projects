@@ -1,2 +1,2 @@
-# RandomPythonStuff
-A bunch of random, but useful python stuff
+# Python Projects
+Catch all repo for general python code projects.
