@@ -47,11 +47,11 @@ workspace = r'C:\Users\andolson\someGDB.gdb'
 '''
 Summary: Function creates x,y,z thing...
 
-Inputs:
+Parameters:
 inputData -- <Description of input data>
 inVar     -- <Description of input variable> 
 
-Outputs:
+Returns:
 outputData -- <Description of output data>  
 
 '''
