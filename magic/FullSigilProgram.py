@@ -167,7 +167,7 @@ def createTeslaSigil(intent, output):
     plt.rcParams.update({'figure.max_open_warning': 0})
     plt.figure(figsize=(9, 9))
 
-    plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
+    plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
              color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
 
     plt.margins(0.20)
@@ -319,8 +319,10 @@ def createSquareSigil(intent, output):
 
     plt.rcParams.update({'figure.max_open_warning': 0})
     plt.figure(figsize=(9, 9))
-    plt.plot(xLst, yLst, '-o', solid_capstyle="projecting", solid_joinstyle="miter",
+
+    plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
              color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
+
     plt.margins(0.25)
     #plt.margins(0.50)
     #plt.margins(0.70)
@@ -344,7 +346,7 @@ sigilStyle = input("Choose sigil style:\n\t1 = Square Sigil\n\t2 = Nonagon Sigil
 
 # Prompt user input for line width
 lineW = input("Input sigil line width: >>>")
-markerW = 1.50 * float(lineW)
+markerW = 2 * float(lineW)
 
 # Prompt user for output directory
 outPath = input("What is the sigil output location?: >>>")
