@@ -23,6 +23,23 @@ def find_in_heart_of_hearts(mylist, char):
         if char in sub_list:
             return (mylist.index(sub_list))
 
+# Define a function for rotating the angle of the last marker symbol in a sigil
+def markerRotation(xLST, yLST):
+
+    # Set the coordinates for the last 2 points in the final sigil line
+    startX = xLST[-2:][0]
+    endX = xLST[-2:][1]
+    startY = yLST[-2:][0]
+    endY = yLST[-2:][1]
+
+    # Calculate the angle in radians of the last sigil line
+    myradians = math.atan2(endY - startY, endX - startX)
+
+    # Convert radians to degrees to define marker rotation
+    mydegrees = math.degrees(myradians)
+
+    return mydegrees
+
 # Generate the Tesla-style Sigil
 def createTeslaSigil(intent, output):
     # Create a reference table and a grid for the sigil
