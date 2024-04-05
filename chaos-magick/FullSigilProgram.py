@@ -1,5 +1,7 @@
 # Random Sigil Grid Generator
 import matplotlib.pyplot as plt
+from matplotlib import MarkerStyle
+import math
 import numpy as np
 from datetime import datetime as dt
 
