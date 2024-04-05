@@ -1,6 +1,7 @@
 # Random Sigil Grid Generator
 import matplotlib.pyplot as plt
-from matplotlib import MarkerStyle
+from matplotlib.markers import MarkerStyle
+from matplotlib.path import Path
 import math
 import numpy as np
 from datetime import datetime as dt
@@ -220,7 +221,7 @@ def createTeslaSigil(intent, output):
     plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
              color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
     # Add the rotated end marker symbol to plot
-    plt.plot(xLst, yLst, marker=m, color='red', markevery=[-1], markersize=30)
+    plt.plot(xLst, yLst, marker=m, color='red', markevery=[-1], markersize=markerW*2.5)
 
     plt.margins(0.20)
     #plt.margins(0.50)
