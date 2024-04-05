@@ -220,6 +220,7 @@ def createTeslaSigil(intent, output):
 
     plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
              color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
+    
     # Add the rotated end marker symbol to plot
     plt.plot(xLst, yLst, marker=m, color='red', markevery=[-1], markersize=markerW*2.5)
 
@@ -370,11 +371,45 @@ def createSquareSigil(intent, output):
         else:
             print("Error: index out of range")
 
+    # Define the endpoint marker symbol
+    verts = [
+        (0., 0.),  # Start, Center-Left
+        (0., 80.),  # Left, top
+        (5., 80.),  # Right, top
+        (5., 0.),  # Center, Center-Right
+        (5., -80.),  # Right, bottom
+        (0., -80.),  # back to left, bottom
+        (0., 0.),  # End, Center-Left
+    ]
+
+    codes = [
+        Path.MOVETO,  # begin drawing
+        Path.LINETO,  # straight line
+        Path.LINETO,
+        Path.LINETO,
+        Path.LINETO,
+        Path.LINETO,
+        Path.CLOSEPOLY,  # close shape. This is not required for this shape but is "good form"
+    ]
+
+    # The new end point marker symbol
+    path = Path(verts, codes)
+
+    # Get the marker rotation angle
+    rotate = markerRotation(xLst,yLst)
+
+    # Define the custom marker symbol and the degrees of rotation
+    m = MarkerStyle(path)
+    m._transform.rotate_deg(rotate)
+
     plt.rcParams.update({'figure.max_open_warning': 0})
     plt.figure(figsize=(9, 9))
 
     plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
              color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
+
+    # Add the rotated end marker symbol to plot
+    plt.plot(xLst, yLst, marker=m, color='red', markevery=[-1], markersize=markerW*2.5)
 
     plt.margins(0.25)
     #plt.margins(0.50)
