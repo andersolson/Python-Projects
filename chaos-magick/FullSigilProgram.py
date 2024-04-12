@@ -219,6 +219,10 @@ def createTeslaSigil(intent, output):
     plt.rcParams.update({'figure.max_open_warning': 0})
     plt.figure(figsize=(9, 9))
 
+    # Add a circle outline. 8 appears to be the best size for these sigils
+    circle1 = plt.Circle((9, 9), 8, color='r', fill=False)
+    plt.gca().add_patch(circle1)
+
     # Draw the sigil lines with start point marker
     plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
              color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
