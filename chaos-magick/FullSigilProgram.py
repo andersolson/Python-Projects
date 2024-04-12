@@ -224,7 +224,7 @@ def createTeslaSigil(intent, output):
     # Add the rotated end marker symbol to plot
     plt.plot(xLst, yLst, marker=m, color='red', markevery=[-1], markersize=markerW*2.5)
 
-    plt.margins(0.20)
+    plt.margins(0.25)
     #plt.margins(0.50)
     #plt.margins(0.70)
     # plt.tight_layout()
