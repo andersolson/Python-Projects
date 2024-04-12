@@ -215,9 +215,11 @@ def createTeslaSigil(intent, output):
     m = MarkerStyle(path)
     m._transform.rotate_deg(rotate)
 
+    # Define the size of the plot
     plt.rcParams.update({'figure.max_open_warning': 0})
     plt.figure(figsize=(9, 9))
 
+    # Draw the sigil lines with start point marker
     plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
              color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
 
@@ -402,9 +404,15 @@ def createSquareSigil(intent, output):
     m = MarkerStyle(path)
     m._transform.rotate_deg(rotate)
 
+    # Define the size of the plot
     plt.rcParams.update({'figure.max_open_warning': 0})
     plt.figure(figsize=(9, 9))
 
+    # Add a circle outline
+    circle1 = plt.Circle((2, 2), 2, color='r', fill=False)
+    plt.gca().add_patch(circle1)
+
+    # Draw the sigil lines with start point marker
     plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
              color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
 
