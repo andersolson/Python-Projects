@@ -62,5 +62,5 @@ for row in arcpy.da.SearchCursor(inData, ['<FIELD-NAME>']):
 # Print a list of all ids and no repeating ids i.e. 'keys'
 print(Counter(uniqueIDs).keys())
 
-# Print a count for occurrance of each id found in original list i.e. 'values'
+# Print a count for occurrence of each id found in original list i.e. 'values'
 print(Counter(uniqueIDs).values())
