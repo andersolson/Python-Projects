@@ -1,4 +1,10 @@
-# Compare field names from two input shapefiles and print out any differences
+'''****************************************************************
+FieldCompare.py
+Author(s): Anders Olson
+Usage: Run script using python IDE or similar
+Description:
+        Compare field names from two input shapefiles and print out any differences
+****************************************************************'''
 
 import arcpy
 
