@@ -535,115 +535,131 @@ def createTrolldomSigil(intent, output):
     gridNum.append(sigilGrid[10][0])
     gridNum.append(sigilGrid[11][0])
     gridNum.append(sigilGrid[12][0])
-    print('Sigil Grid as a list:\n', gridNum)
-    #
-    # # Get index location of number in the sigil grid
-    # sigilLocation = []
-    # for i in numberLst:
-    #     sigilLocation.append(gridNum.index(i))
-    #
-    # xLst = []
-    # yLst = []
-    #
-    # for position in sigilLocation:
-    #     if position == 0:
-    #         xLst.append(9)
-    #         yLst.append(15)
-    #         # print("x,y = 1,3")
-    #     elif position == 1:
-    #         xLst.append(13)
-    #         yLst.append(14)
-    #         # print("x,y = 2,3")
-    #     elif position == 2:
-    #         xLst.append(15)
-    #         yLst.append(10)
-    #         # print("x,y = 3,3")
-    #     elif position == 3:
-    #         xLst.append(14)
-    #         yLst.append(6)
-    #         # print("x,y = 1,2")
-    #     elif position == 4:
-    #         xLst.append(11)
-    #         yLst.append(3)
-    #         # print("x,y = 2,2")
-    #     elif position == 5:
-    #         xLst.append(7)
-    #         yLst.append(3)
-    #         # print("x,y = 3,2")
-    #     elif position == 6:
-    #         xLst.append(4)
-    #         yLst.append(6)
-    #         # print("x,y = 1,1")
-    #     elif position == 7:
-    #         xLst.append(3)
-    #         yLst.append(10)
-    #         # print("x,y = 2,1")
-    #     elif position == 8:
-    #         xLst.append(5)
-    #         yLst.append(14)
-    #         # print("x,y = 3,1")
-    #     else:
-    #         print("Error: index out of range")
-    #
-    # # Tesla vortex coordinates
-    # x = [9, 13, 15, 14, 11, 7, 4, 3, 5]
-    # y = [15, 14, 10, 6, 3, 3, 6, 10, 14]
-    #
-    # # Define the endpoint marker symbol
-    # verts = [
-    #     (0., 0.),  # Start, Center-Left
-    #     (0., 80.),  # Left, top
-    #     (20., 80.),  # Right, top
-    #     (20., 0.),  # Center, Center-Right
-    #     (20., -80.),  # Right, bottom
-    #     (0., -80.),  # back to left, bottom
-    #     (0., 0.),  # End, Center-Left
-    # ]
-    #
-    # codes = [
-    #     Path.MOVETO,  # begin drawing
-    #     Path.LINETO,  # straight line
-    #     Path.LINETO,
-    #     Path.LINETO,
-    #     Path.LINETO,
-    #     Path.LINETO,
-    #     Path.CLOSEPOLY,  # close shape. This is not required for this shape but is "good form"
-    # ]
-    #
-    # # The new end point marker symbol
-    # path = Path(verts, codes)
-    #
-    # # Get the marker rotation angle
-    # rotate = markerRotation(xLst, yLst)
-    #
-    # # Define the custom marker symbol and the degrees of rotation
-    # m = MarkerStyle(path)
-    # m._transform.rotate_deg(rotate)
-    #
-    # # Define the size of the plot
-    # plt.rcParams.update({'figure.max_open_warning': 0})
-    # plt.figure(figsize=(9, 9))
-    #
-    # # Add a circle outline. 8 appears to be the best size for these sigils
-    # circle1 = plt.Circle((9, 9), 8, color='r', fill=False)
-    # plt.gca().add_patch(circle1)
-    #
-    # # Draw the sigil lines with start point marker
-    # plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
-    #          color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
-    #
-    # # Add the rotated end marker symbol to plot
-    # plt.plot(xLst, yLst, marker=m, color='red', markevery=[-1], markersize=markerW * 2.5)
-    #
-    # plt.margins(0.25)
-    # # plt.margins(0.50)
-    # # plt.margins(0.70)
-    # # plt.tight_layout()
-    # plt.axis('off')
-    # plt.savefig(output,
-    #             bbox_inches='tight',
-    #             transparent=True,
-    #             pad_inches=0)
+    # print('Sigil Grid as a list:\n', gridNum)
+
+    # Get index location of number in the sigil grid
+    sigilLocation = []
+    for i in numberLst:
+        sigilLocation.append(gridNum.index(i))
+
+    xLst = []
+    yLst = []
+
+    for position in sigilLocation:
+        if position == 0:
+            xLst.append(1)
+            yLst.append(2)
+            # print("x,y = 1,2")
+        elif position == 1:
+            xLst.append(0)
+            yLst.append(1)
+            # print("x,y = 0,1")
+        elif position == 2:
+            xLst.append(-1)
+            yLst.append(2)
+            # print("x,y = -1,2")
+        elif position == 3:
+            xLst.append(1)
+            yLst.append(1)
+            # print("x,y = 1,1")
+        elif position == 4:
+            xLst.append(0)
+            yLst.append(0)
+            # print("x,y = 0,0")
+        elif position == 5:
+            xLst.append(-1)
+            yLst.append(1)
+            # print("x,y = -1,1")
+        elif position == 6:
+            xLst.append(1)
+            yLst.append(0)
+            # print("x,y = 1,0")
+        elif position == 7:
+            xLst.append(0)
+            yLst.append(-1)
+            # print("x,y = 0,-1")
+        elif position == 8:
+            xLst.append(1)
+            yLst.append(-1)
+            # print("x,y = 1,-1")
+        elif position == 8:
+            xLst.append(1)
+            yLst.append(-1)
+            # print("x,y = 1,-1")
+        elif position == 8:
+            xLst.append(1)
+            yLst.append(-1)
+            # print("x,y = 1,-1")
+        elif position == 8:
+            xLst.append(1)
+            yLst.append(-1)
+            # print("x,y = 1,-1")
+        elif position == 8:
+            xLst.append(1)
+            yLst.append(-1)
+            # print("x,y = 1,-1")
+        else:
+            print("Error: index out of range")
+
+    # Tesla vortex coordinates
+    x = [9, 13, 15, 14, 11, 7, 4, 3, 5]
+    y = [15, 14, 10, 6, 3, 3, 6, 10, 14]
+
+    # Define the endpoint marker symbol
+    verts = [
+        (0., 0.),  # Start, Center-Left
+        (0., 80.),  # Left, top
+        (20., 80.),  # Right, top
+        (20., 0.),  # Center, Center-Right
+        (20., -80.),  # Right, bottom
+        (0., -80.),  # back to left, bottom
+        (0., 0.),  # End, Center-Left
+    ]
+
+    codes = [
+        Path.MOVETO,  # begin drawing
+        Path.LINETO,  # straight line
+        Path.LINETO,
+        Path.LINETO,
+        Path.LINETO,
+        Path.LINETO,
+        Path.CLOSEPOLY,  # close shape. This is not required for this shape but is "good form"
+    ]
+
+    # The new end point marker symbol
+    path = Path(verts, codes)
+
+    # Get the marker rotation angle
+    rotate = markerRotation(xLst, yLst)
+
+    # Define the custom marker symbol and the degrees of rotation
+    m = MarkerStyle(path)
+    m._transform.rotate_deg(rotate)
+
+    # Define the size of the plot
+    plt.rcParams.update({'figure.max_open_warning': 0})
+    plt.figure(figsize=(9, 9))
+
+    # Add a circle outline. 8 appears to be the best size for these sigils
+    circle1 = plt.Circle((9, 9), 8, color='r', fill=False)
+    plt.gca().add_patch(circle1)
+
+    # Draw the sigil lines with start point marker
+    plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
+             color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
+
+    # Add the rotated end marker symbol to plot
+    plt.plot(xLst, yLst, marker=m, color='red', markevery=[-1], markersize=markerW * 2.5)
+
+    plt.margins(0.25)
+    # plt.margins(0.50)
+    # plt.margins(0.70)
+    # plt.tight_layout()
+    plt.axis('off')
+    plt.savefig(output,
+                bbox_inches='tight',
+                transparent=True,
+                pad_inches=0)
 
 
 ### Run Program ###
