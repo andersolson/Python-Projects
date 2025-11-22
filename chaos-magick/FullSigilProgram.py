@@ -54,6 +54,8 @@ def createTeslaSigil(intent, output):
     # Create a random codex
     sigilTableHeader = np.random.choice(sigilValues, 9, False)
     sigilTableBody = np.random.choice(sigilLetters, (3, 9), False)
+    # print(sigilTableHeader)
+    # print(sigilTableBody)
 
     # Nested list representation of the reference table
     refTable = []
@@ -449,18 +451,18 @@ def createTrolldomSigil(intent, output):
     print(sigilTableHeader)
     print(sigilTableBody)
 
-    # # Nested list representation of the reference table
-    # refTable = []
-    #
-    # # Nested list of number values and letters
-    # for x in range(0, 13):
-    #     nest = []
-    #     nest.append(sigilTableHeader[x])
-    #     nest.append(sigilTableBody[0][x])
-    #     nest.append(sigilTableBody[1][x])
-    #     nest.append(sigilTableBody[2][x])
-    #     refTable.append(nest)
-    #
+    # Nested list representation of the reference table
+    refTable = []
+
+    # Nested list of number values and letters
+    for x in range(0, 13):
+        nest = []
+        nest.append(sigilTableHeader[x])
+        nest.append(sigilTableBody[0][x])
+        nest.append(sigilTableBody[1][x])
+        refTable.append(nest)
+    print(refTable)
+
     # # Store the sigil position of letters in a list
     # refLst = []
     # for letter in intent:
