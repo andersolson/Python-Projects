@@ -68,179 +68,180 @@ def createTeslaSigil(intent, output):
         nest.append(sigilTableBody[1][x])
         nest.append(sigilTableBody[2][x])
         refTable.append(nest)
+    print(refTable)
 
-    # Store the sigil position of letters in a list
-    refLst = []
-    for letter in intent:
-        refLst.append(find_in_heart_of_hearts(refTable, letter))
-
-    # Get a list of the numbers linked to the letters
-    numberLst = []
-    for i in refLst:
-        numberLst.append(refTable[i][0])
-
-    # Display matrices
-    print('\nRandomized Sigil Table:\n' \
-          '=====================================\n' \
-          '| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |\n' \
-          '|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n' \
-          '| {9} | {10} | {11} | {12} | {13} | {14} | {15} | {16} | {17} |\n' \
-          '| {18} | {19} | {20} | {21} | {22} | {23} | {24} | {25} | {26} |\n' \
-          '| {27} | {28} | {29} | {30} | {31} | {32} | {33} | {34} | {35} |\n' \
-          '=====================================\n'.format(sigilTableHeader[0], sigilTableHeader[1],
-                                                           sigilTableHeader[2], sigilTableHeader[3],
-                                                           sigilTableHeader[4], sigilTableHeader[5],
-                                                           sigilTableHeader[6], sigilTableHeader[7],
-                                                           sigilTableHeader[8],
-                                                           sigilTableBody[0][0], sigilTableBody[0][1],
-                                                           sigilTableBody[0][2], sigilTableBody[0][3],
-                                                           sigilTableBody[0][4], sigilTableBody[0][5],
-                                                           sigilTableBody[0][6], sigilTableBody[0][7],
-                                                           sigilTableBody[0][8],
-                                                           sigilTableBody[1][0], sigilTableBody[1][1],
-                                                           sigilTableBody[1][2], sigilTableBody[1][3],
-                                                           sigilTableBody[1][4], sigilTableBody[1][5],
-                                                           sigilTableBody[1][6], sigilTableBody[1][7],
-                                                           sigilTableBody[1][8],
-                                                           sigilTableBody[2][0], sigilTableBody[2][1],
-                                                           sigilTableBody[2][2], sigilTableBody[2][3],
-                                                           sigilTableBody[2][4], sigilTableBody[2][5],
-                                                           sigilTableBody[2][6], sigilTableBody[2][7],
-                                                           sigilTableBody[2][8], ))
-
-    # Create a random sigil grid
-    sigilGrid = np.random.choice(sigilValues, (3, 3), False)
-
-    print('Randomized Sigil Grid:\n' \
-          '=============\n' \
-          '| {0} | {1} | {2} |\n' \
-          '| {3} | {4} | {5} |\n' \
-          '| {6} | {7} | {8} |\n' \
-          '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[0][2], sigilGrid[1][0], sigilGrid[1][1],
-                                 sigilGrid[1][2], sigilGrid[2][0], sigilGrid[2][1], sigilGrid[2][2]))
-
-    print('\nNumber associated with letter:\n', numberLst, '\n')
-
-    # List for tracking the order of numbers in the sigil grid
-    gridNum = []
-    gridNum.append(sigilGrid[0][0])
-    gridNum.append(sigilGrid[0][1])
-    gridNum.append(sigilGrid[0][2])
-    gridNum.append(sigilGrid[1][0])
-    gridNum.append(sigilGrid[1][1])
-    gridNum.append(sigilGrid[1][2])
-    gridNum.append(sigilGrid[2][0])
-    gridNum.append(sigilGrid[2][1])
-    gridNum.append(sigilGrid[2][2])
-    # print('Sigil Grid as a list:\n', gridNum)
-
-    # Get index location of number in the sigil grid
-    sigilLocation = []
-    for i in numberLst:
-        sigilLocation.append(gridNum.index(i))
-
-    xLst = []
-    yLst = []
-
-    for position in sigilLocation:
-        if position == 0:
-            xLst.append(9)
-            yLst.append(15)
-            # print("x,y = 1,3")
-        elif position == 1:
-            xLst.append(13)
-            yLst.append(14)
-            # print("x,y = 2,3")
-        elif position == 2:
-            xLst.append(15)
-            yLst.append(10)
-            # print("x,y = 3,3")
-        elif position == 3:
-            xLst.append(14)
-            yLst.append(6)
-            # print("x,y = 1,2")
-        elif position == 4:
-            xLst.append(11)
-            yLst.append(3)
-            # print("x,y = 2,2")
-        elif position == 5:
-            xLst.append(7)
-            yLst.append(3)
-            # print("x,y = 3,2")
-        elif position == 6:
-            xLst.append(4)
-            yLst.append(6)
-            # print("x,y = 1,1")
-        elif position == 7:
-            xLst.append(3)
-            yLst.append(10)
-            # print("x,y = 2,1")
-        elif position == 8:
-            xLst.append(5)
-            yLst.append(14)
-            # print("x,y = 3,1")
-        else:
-            print("Error: index out of range")
-
-    # Tesla vortex coordinates
-    x = [9, 13, 15, 14, 11, 7, 4, 3, 5]
-    y = [15, 14, 10, 6, 3, 3, 6, 10, 14]
-
-    # Define the endpoint marker symbol
-    verts = [
-        (0., 0.),  # Start, Center-Left
-        (0., 80.),  # Left, top
-        (20., 80.),  # Right, top
-        (20., 0.),  # Center, Center-Right
-        (20., -80.),  # Right, bottom
-        (0., -80.),  # back to left, bottom
-        (0., 0.),  # End, Center-Left
-    ]
-
-    codes = [
-        Path.MOVETO,  # begin drawing
-        Path.LINETO,  # straight line
-        Path.LINETO,
-        Path.LINETO,
-        Path.LINETO,
-        Path.LINETO,
-        Path.CLOSEPOLY,  # close shape. This is not required for this shape but is "good form"
-    ]
-
-    # The new end point marker symbol
-    path = Path(verts, codes)
-
-    # Get the marker rotation angle
-    rotate = markerRotation(xLst,yLst)
-
-    # Define the custom marker symbol and the degrees of rotation
-    m = MarkerStyle(path)
-    m._transform.rotate_deg(rotate)
-
-    # Define the size of the plot
-    plt.rcParams.update({'figure.max_open_warning': 0})
-    plt.figure(figsize=(9, 9))
-
-    # Add a circle outline. 8 appears to be the best size for these sigils
-    circle1 = plt.Circle((9, 9), 8, color='r', fill=False)
-    plt.gca().add_patch(circle1)
-
-    # Draw the sigil lines with start point marker
-    plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
-             color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
-
-    # Add the rotated end marker symbol to plot
-    plt.plot(xLst, yLst, marker=m, color='red', markevery=[-1], markersize=markerW*2.5)
-
-    plt.margins(0.25)
-    #plt.margins(0.50)
-    #plt.margins(0.70)
-    # plt.tight_layout()
-    plt.axis('off')
-    plt.savefig(output,
-                bbox_inches='tight',
-                transparent=True,
-                pad_inches=0)
+    # # Store the sigil position of letters in a list
+    # refLst = []
+    # for letter in intent:
+    #     refLst.append(find_in_heart_of_hearts(refTable, letter))
+    #
+    # # Get a list of the numbers linked to the letters
+    # numberLst = []
+    # for i in refLst:
+    #     numberLst.append(refTable[i][0])
+    #
+    # # Display matrices
+    # print('\nRandomized Sigil Table:\n' \
+    #       '=====================================\n' \
+    #       '| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |\n' \
+    #       '|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n' \
+    #       '| {9} | {10} | {11} | {12} | {13} | {14} | {15} | {16} | {17} |\n' \
+    #       '| {18} | {19} | {20} | {21} | {22} | {23} | {24} | {25} | {26} |\n' \
+    #       '| {27} | {28} | {29} | {30} | {31} | {32} | {33} | {34} | {35} |\n' \
+    #       '=====================================\n'.format(sigilTableHeader[0], sigilTableHeader[1],
+    #                                                        sigilTableHeader[2], sigilTableHeader[3],
+    #                                                        sigilTableHeader[4], sigilTableHeader[5],
+    #                                                        sigilTableHeader[6], sigilTableHeader[7],
+    #                                                        sigilTableHeader[8],
+    #                                                        sigilTableBody[0][0], sigilTableBody[0][1],
+    #                                                        sigilTableBody[0][2], sigilTableBody[0][3],
+    #                                                        sigilTableBody[0][4], sigilTableBody[0][5],
+    #                                                        sigilTableBody[0][6], sigilTableBody[0][7],
+    #                                                        sigilTableBody[0][8],
+    #                                                        sigilTableBody[1][0], sigilTableBody[1][1],
+    #                                                        sigilTableBody[1][2], sigilTableBody[1][3],
+    #                                                        sigilTableBody[1][4], sigilTableBody[1][5],
+    #                                                        sigilTableBody[1][6], sigilTableBody[1][7],
+    #                                                        sigilTableBody[1][8],
+    #                                                        sigilTableBody[2][0], sigilTableBody[2][1],
+    #                                                        sigilTableBody[2][2], sigilTableBody[2][3],
+    #                                                        sigilTableBody[2][4], sigilTableBody[2][5],
+    #                                                        sigilTableBody[2][6], sigilTableBody[2][7],
+    #                                                        sigilTableBody[2][8], ))
+    #
+    # # Create a random sigil grid
+    # sigilGrid = np.random.choice(sigilValues, (3, 3), False)
+    #
+    # print('Randomized Sigil Grid:\n' \
+    #       '=============\n' \
+    #       '| {0} | {1} | {2} |\n' \
+    #       '| {3} | {4} | {5} |\n' \
+    #       '| {6} | {7} | {8} |\n' \
+    #       '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[0][2], sigilGrid[1][0], sigilGrid[1][1],
+    #                              sigilGrid[1][2], sigilGrid[2][0], sigilGrid[2][1], sigilGrid[2][2]))
+    #
+    # print('\nNumber associated with letter:\n', numberLst, '\n')
+    #
+    # # List for tracking the order of numbers in the sigil grid
+    # gridNum = []
+    # gridNum.append(sigilGrid[0][0])
+    # gridNum.append(sigilGrid[0][1])
+    # gridNum.append(sigilGrid[0][2])
+    # gridNum.append(sigilGrid[1][0])
+    # gridNum.append(sigilGrid[1][1])
+    # gridNum.append(sigilGrid[1][2])
+    # gridNum.append(sigilGrid[2][0])
+    # gridNum.append(sigilGrid[2][1])
+    # gridNum.append(sigilGrid[2][2])
+    # # print('Sigil Grid as a list:\n', gridNum)
+    #
+    # # Get index location of number in the sigil grid
+    # sigilLocation = []
+    # for i in numberLst:
+    #     sigilLocation.append(gridNum.index(i))
+    #
+    # xLst = []
+    # yLst = []
+    #
+    # for position in sigilLocation:
+    #     if position == 0:
+    #         xLst.append(9)
+    #         yLst.append(15)
+    #         # print("x,y = 1,3")
+    #     elif position == 1:
+    #         xLst.append(13)
+    #         yLst.append(14)
+    #         # print("x,y = 2,3")
+    #     elif position == 2:
+    #         xLst.append(15)
+    #         yLst.append(10)
+    #         # print("x,y = 3,3")
+    #     elif position == 3:
+    #         xLst.append(14)
+    #         yLst.append(6)
+    #         # print("x,y = 1,2")
+    #     elif position == 4:
+    #         xLst.append(11)
+    #         yLst.append(3)
+    #         # print("x,y = 2,2")
+    #     elif position == 5:
+    #         xLst.append(7)
+    #         yLst.append(3)
+    #         # print("x,y = 3,2")
+    #     elif position == 6:
+    #         xLst.append(4)
+    #         yLst.append(6)
+    #         # print("x,y = 1,1")
+    #     elif position == 7:
+    #         xLst.append(3)
+    #         yLst.append(10)
+    #         # print("x,y = 2,1")
+    #     elif position == 8:
+    #         xLst.append(5)
+    #         yLst.append(14)
+    #         # print("x,y = 3,1")
+    #     else:
+    #         print("Error: index out of range")
+    #
+    # # Tesla vortex coordinates
+    # x = [9, 13, 15, 14, 11, 7, 4, 3, 5]
+    # y = [15, 14, 10, 6, 3, 3, 6, 10, 14]
+    #
+    # # Define the endpoint marker symbol
+    # verts = [
+    #     (0., 0.),  # Start, Center-Left
+    #     (0., 80.),  # Left, top
+    #     (20., 80.),  # Right, top
+    #     (20., 0.),  # Center, Center-Right
+    #     (20., -80.),  # Right, bottom
+    #     (0., -80.),  # back to left, bottom
+    #     (0., 0.),  # End, Center-Left
+    # ]
+    #
+    # codes = [
+    #     Path.MOVETO,  # begin drawing
+    #     Path.LINETO,  # straight line
+    #     Path.LINETO,
+    #     Path.LINETO,
+    #     Path.LINETO,
+    #     Path.LINETO,
+    #     Path.CLOSEPOLY,  # close shape. This is not required for this shape but is "good form"
+    # ]
+    #
+    # # The new end point marker symbol
+    # path = Path(verts, codes)
+    #
+    # # Get the marker rotation angle
+    # rotate = markerRotation(xLst,yLst)
+    #
+    # # Define the custom marker symbol and the degrees of rotation
+    # m = MarkerStyle(path)
+    # m._transform.rotate_deg(rotate)
+    #
+    # # Define the size of the plot
+    # plt.rcParams.update({'figure.max_open_warning': 0})
+    # plt.figure(figsize=(9, 9))
+    #
+    # # Add a circle outline. 8 appears to be the best size for these sigils
+    # circle1 = plt.Circle((9, 9), 8, color='r', fill=False)
+    # plt.gca().add_patch(circle1)
+    #
+    # # Draw the sigil lines with start point marker
+    # plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
+    #          color='red', linewidth=lineW, markevery=[0], markersize=markerW, zorder=1)
+    #
+    # # Add the rotated end marker symbol to plot
+    # plt.plot(xLst, yLst, marker=m, color='red', markevery=[-1], markersize=markerW*2.5)
+    #
+    # plt.margins(0.25)
+    # #plt.margins(0.50)
+    # #plt.margins(0.70)
+    # # plt.tight_layout()
+    # plt.axis('off')
+    # plt.savefig(output,
+    #             bbox_inches='tight',
+    #             transparent=True,
+    #             pad_inches=0)
 
 # Generate a Square-style Sigil
 def createSquareSigil(intent, output):
