@@ -107,7 +107,7 @@ def createTeslaSigil(intent, output):
                                                            sigilTableBody[2][2], sigilTableBody[2][3],
                                                            sigilTableBody[2][4], sigilTableBody[2][5],
                                                            sigilTableBody[2][6], sigilTableBody[2][7],
-                                                           sigilTableBody[2][8], ))
+                                                           sigilTableBody[2][8]))
 
     # Create a random sigil grid
     sigilGrid = np.random.choice(sigilValues, (3, 3), False)
@@ -477,44 +477,46 @@ def createTrolldomSigil(intent, output):
     # Display matrices
     print('\nRandomized Sigil Table:\n' \
           '=====================================\n' \
-          '| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |\n' \
-          '|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n' \
-          '| {9} | {10} | {11} | {12} | {13} | {14} | {15} | {16} | {17} |\n' \
-          '| {18} | {19} | {20} | {21} | {22} | {23} | {24} | {25} | {26} |\n' \
-          '| {27} | {28} | {29} | {30} | {31} | {32} | {33} | {34} | {35} |\n' \
+          '| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} | {9} | {10} | {11} | {12} |\n' \
+          '|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n' \
+          '| {9} | {10} | {11} | {12} | {13} | {14} | {15} | {16} | {17} | {18} | {19} | {20} | {21} |\n' \
+          '| {22} | {23} | {24} | {25} | {26} | {27} | {28} | {29} | {30} | {31} | {32} | {33} | {34} |\n' \
           '=====================================\n'.format(sigilTableHeader[0], sigilTableHeader[1],
                                                            sigilTableHeader[2], sigilTableHeader[3],
                                                            sigilTableHeader[4], sigilTableHeader[5],
                                                            sigilTableHeader[6], sigilTableHeader[7],
-                                                           sigilTableHeader[8],
+                                                           sigilTableHeader[8], sigilTableHeader[9],
+                                                           sigilTableHeader[10], sigilTableHeader[11],
+                                                           sigilTableHeader[12],
                                                            sigilTableBody[0][0], sigilTableBody[0][1],
                                                            sigilTableBody[0][2], sigilTableBody[0][3],
                                                            sigilTableBody[0][4], sigilTableBody[0][5],
                                                            sigilTableBody[0][6], sigilTableBody[0][7],
-                                                           sigilTableBody[0][8],
+                                                           sigilTableBody[0][8], sigilTableBody[0][9],
+                                                           sigilTableBody[0][10], sigilTableBody[0][11],
+                                                           sigilTableBody[0][12],
                                                            sigilTableBody[1][0], sigilTableBody[1][1],
                                                            sigilTableBody[1][2], sigilTableBody[1][3],
                                                            sigilTableBody[1][4], sigilTableBody[1][5],
                                                            sigilTableBody[1][6], sigilTableBody[1][7],
-                                                           sigilTableBody[1][8],
-                                                           sigilTableBody[2][0], sigilTableBody[2][1],
-                                                           sigilTableBody[2][2], sigilTableBody[2][3],
-                                                           sigilTableBody[2][4], sigilTableBody[2][5],
-                                                           sigilTableBody[2][6], sigilTableBody[2][7],
-                                                           sigilTableBody[2][8], ))
+                                                           sigilTableBody[1][8], sigilTableBody[1][9],
+                                                           sigilTableBody[1][10], sigilTableBody[1][11],
+                                                           sigilTableBody[1][12]))
 
-    # Create a random sigil grid
-    sigilGrid = np.random.choice(sigilValues, (3, 3), False)
-
-    print('Randomized Sigil Grid:\n' \
-          '=============\n' \
-          '| {0} | {1} | {2} |\n' \
-          '| {3} | {4} | {5} |\n' \
-          '| {6} | {7} | {8} |\n' \
-          '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[0][2], sigilGrid[1][0], sigilGrid[1][1],
-                                 sigilGrid[1][2], sigilGrid[2][0], sigilGrid[2][1], sigilGrid[2][2]))
-
-    print('\nNumber associated with letter:\n', numberLst, '\n')
+    # # Create a random sigil grid
+    # sigilGrid = np.random.choice(sigilValues, (3, 3), False)
+    #
+    # print('Randomized Sigil Grid:\n' \
+    #       '=============\n' \
+    #       '| {0} |     | {1} |\n' \
+    #       '| {2} | {3} | {4} |\n' \
+    #       '| {5} | {6} | {7} |\n' \
+    #       '| {8} | {9} | {10} |\n' \
+    #       '| {11} |     | {12} |\n' \
+    #       '============='.format(sigilGrid[0][0], sigilGrid[0][1], sigilGrid[1][2], sigilGrid[1][0], sigilGrid[1][1],
+    #                              sigilGrid[][2], sigilGrid[][0], sigilGrid[][1], sigilGrid[][2]))
+    #
+    # print('\nNumber associated with letter:\n', numberLst, '\n')
 
     # # List for tracking the order of numbers in the sigil grid
     # gridNum = []
