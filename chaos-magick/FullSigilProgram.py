@@ -638,11 +638,11 @@ def createTrolldomSigil(intent, output):
 
     # Define the size of the plot
     plt.rcParams.update({'figure.max_open_warning': 0})
-    plt.figure(figsize=(9, 9))
+    plt.figure(figsize=(13, 13))
 
     # Add a circle outline. 8 appears to be the best size for these sigils
-    circle1 = plt.Circle((9, 9), 8, color='r', fill=False)
-    plt.gca().add_patch(circle1)
+    # circle1 = plt.Circle((13, 13), 8, color='r', fill=False)
+    # plt.gca().add_patch(circle1)
 
     # Draw the sigil lines with start point marker
     plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter",
