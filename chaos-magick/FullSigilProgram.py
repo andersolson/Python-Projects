@@ -579,25 +579,25 @@ def createTrolldomSigil(intent, output):
             yLst.append(-1)
             # print("x,y = 0,-1")
         elif position == 8:
+            xLst.append(-1)
+            yLst.append(0)
+            # print("x,y = -1,0")
+        elif position == 9:
             xLst.append(1)
             yLst.append(-1)
             # print("x,y = 1,-1")
-        elif position == 8:
-            xLst.append(1)
+        elif position == 10:
+            xLst.append(-1)
             yLst.append(-1)
-            # print("x,y = 1,-1")
-        elif position == 8:
+            # print("x,y = -1,-1")
+        elif position == 11:
             xLst.append(1)
-            yLst.append(-1)
-            # print("x,y = 1,-1")
-        elif position == 8:
-            xLst.append(1)
-            yLst.append(-1)
-            # print("x,y = 1,-1")
-        elif position == 8:
-            xLst.append(1)
-            yLst.append(-1)
-            # print("x,y = 1,-1")
+            yLst.append(-2)
+            # print("x,y = 1,-2")
+        elif position == 12:
+            xLst.append(-1)
+            yLst.append(-2)
+            # print("x,y = -1,-2")
         else:
             print("Error: index out of range")
 
