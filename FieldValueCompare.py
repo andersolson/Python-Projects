@@ -71,8 +71,8 @@ def diffLST(inLST1,inLST2):
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 
 # Input shapefiles or dbf with id field to compare
-shp1 = r'C:\Users\is_olson\Documents\Projects\Central-Square\reports\CSProjectsReport_111025.shp'
-shp2 = r'C:\Users\is_olson\Documents\Projects\Central-Square\reports\CSProjectsReport_111025_TEST.shp'
+shp1 = r'C:\Users\is_olson\Documents\Projects\Central-Square\reports\CSUpdateReport_111825.shp'
+shp2 = r'C:\Users\is_olson\Documents\Projects\Central-Square\reports\CSUpdateReport_111825_TEST.shp'
 
 # Field name that the value search will use to find all values
 fieldName = 'PIN'
