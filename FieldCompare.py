@@ -34,7 +34,7 @@ def diffLST(inLST1,inLST2):
 
 fldLST_1 = []
 fldLST_2 = []
-getFieldName(inSHP=r'C:\Users\is_olson\Documents\Projects\Central-Square\Reports_Project\SQLServer-C3GISPROD4-CORE_GIS(sde).sde\SDE.GIS_APPLICATIONS\SDE.ACTIVE_DEVELOPMENT_PROJECTS',
+getFieldName(inSHP=r'C:\Users\is_olson\Documents\Projects\Central-Square\Reports_Project\SQLServer-C3GISPROD2-CORE_GIS(sde).sde\SDE.GIS_APPLICATIONS\SDE.ACTIVE_DEVELOPMENT_PROJECTS',
              inLST=fldLST_1)
 getFieldName(inSHP=r'C:\Users\is_olson\Documents\Projects\Central-Square\Reports_Project\SQLServer-C3GISDB-C3GIS(sde).sde\C3GIS.SDE.AdministrativeAreas\C3GIS.SDE.ACTIVE_DEVELOPMENT_PROJECTS',
              inLST=fldLST_2)
