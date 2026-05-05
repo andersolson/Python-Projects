@@ -601,9 +601,9 @@ def createTrolldomSigil(intent, output):
         else:
             print("Error: index out of range")
 
-    # Trolldom coordinates
-    x = [9, 13, 15, 14, 11, 7, 4, 3, 5]
-    y = [15, 14, 10, 6, 3, 3, 6, 10, 14]
+    # Trollrun coordinates
+    x = [1, 0, -1, 1, 0, -1, 1, 0, -1, 1, -1, 1, -1]
+    y = [2, 1, 2, 1, 0, 1, 0, -1, 0, -1, -1, -2, -2]
 
     # Define the endpoint marker symbol
     verts = [
