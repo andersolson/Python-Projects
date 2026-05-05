@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Prompt user input
-intention = "I need to go beer"
+intention = "Create a random pyplot"
 
 # Capitalize the input
 capIntention = intention.upper()
