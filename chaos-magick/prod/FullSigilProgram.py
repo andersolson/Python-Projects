@@ -601,7 +601,7 @@ def createTrolldomSigil(intent, output):
         else:
             print("Error: index out of range")
 
-    # Tesla vortex coordinates
+    # Trolldom coordinates
     x = [9, 13, 15, 14, 11, 7, 4, 3, 5]
     y = [15, 14, 10, 6, 3, 3, 6, 10, 14]
 
