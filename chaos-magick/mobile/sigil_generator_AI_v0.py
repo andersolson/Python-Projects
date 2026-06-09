@@ -1,5 +1,5 @@
 # --- Module Header and Imports  ---
-import os
+
 import math
 import numpy as np
 import matplotlib.pyplot as plt
@@ -185,6 +185,7 @@ def createTrolldomSigil(intent, line_width, output_path):
 
 # --- Main Dispatcher Function ---
 def generate_sigil(intent_text, style, line_width, output_dir):
+    line_width = float(line_width)
     phrase = clean_intent(intent_text)
     now = dt.now()
     tdy = now.strftime('%Y%m')
