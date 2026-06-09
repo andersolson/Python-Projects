@@ -10,6 +10,7 @@ def clean_intent(intent_text):
 
 # --- Master Dispatcher Function ---
 def generate_sigil(intent_text, style, line_width, output_dir):
+    line_width = float(line_width)
     phrase = clean_intent(intent_text)
     now = dt.now()
     tdy = now.strftime('%Y%m')
