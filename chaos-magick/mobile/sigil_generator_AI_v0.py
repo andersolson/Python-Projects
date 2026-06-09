@@ -5,7 +5,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.markers import MarkerStyle
 from matplotlib.path import Path
-from datetime import datetime as dt
 import os
 from datetime import datetime as dt
 
@@ -130,7 +129,7 @@ def createTeslaSigil(intent, line_width, output_path):
     plt.figure(figsize=(9,9))
     circle1 = plt.Circle((9,9), 8, color='r', fill=False)
     plt.gca().add_patch(circle1)
-    plt.plot(xLst, yLst, '-o', color='red', linewidth=line_width, markevery=[0], markersize=marker_width, zorder=1)
+    plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter", color='red', linewidth=line_width, markevery=[0], markersize=marker_width, zorder=1)
     plt.plot(xLst, yLst, marker=m, color='red', markevery=[-1], markersize=marker_width*2.5)
     plt.margins(0.25)
     plt.axis('off')
@@ -176,7 +175,7 @@ def createTrolldomSigil(intent, line_width, output_path):
     m._transform.rotate_deg(rotate)
     plt.rcParams.update({'figure.max_open_warning':0})
     plt.figure(figsize=(13,13))
-    plt.plot(xLst, yLst, '-o', color='red', linewidth=line_width, markevery=[0], markersize=marker_width, zorder=1)
+    plt.plot(xLst, yLst, '-o', solid_capstyle="butt", solid_joinstyle="miter", color='red', linewidth=line_width, markevery=[0], markersize=marker_width, zorder=1)
     plt.plot(xLst, yLst, marker=m, color='red', markevery=[-1], markersize=marker_width*2.5)
     plt.margins(0.25)
     plt.axis('off')
