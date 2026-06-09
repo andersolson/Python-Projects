@@ -34,6 +34,14 @@ def markerRotation(xLST, yLST):
     degrees = math.degrees(radians)
     return degrees
 
+def clean_intent(intent_text):
+    intent = intent_text.upper()
+    vowels = ['A','E','I','O','U',' ']
+    for v in vowels:
+        intent = intent.replace(v, '')
+    intent = removeDuplicate(intent)
+    return intent
+
 # --- Square Sigil Plotting Function (Appended) ---
 def createSquareSigil(intent, line_width, output_path):
     marker_width = line_width * 2
@@ -175,24 +183,19 @@ def createTrolldomSigil(intent, line_width, output_path):
     plt.savefig(output_path, bbox_inches='tight', transparent=True, pad_inches=0)
     plt.close()
 
-# Main function
+# --- Main Dispatcher Function ---
 def generate_sigil(intent_text, style, line_width, output_dir):
-    # Clean input
-    intention = intent_text.upper()
-    vowels = ['A','E','I','O','U',' ']
-    for i in vowels:
-        intention = intention.replace(i,'')
-    phrase = removeDuplicate(intention)
-
-    # Build filename
+    phrase = clean_intent(intent_text)
     now = dt.now()
     tdy = now.strftime('%Y%m')
-    filename = f"{phrase}_{tdy}.png"
+    filename = f'{phrase}_{tdy}.png'
     output_path = os.path.join(output_dir, filename)
-
-    # Placeholder for actual sigil generation based on style
-    with open(output_path, 'w') as f:
-        f.write("Sigil placeholder. Replace with Matplotlib generated image.")
-
+    if style == '1':
+        createSquareSigil(phrase, line_width, output_path)
+    elif style == '2':
+        createTeslaSigil(phrase, line_width, output_path)
+    elif style == '3':
+        createTrolldomSigil(phrase, line_width, output_path)
+    else:
+        raise ValueError('Invalid style code. Use 1, 2, or 3.')
     return output_path
-
