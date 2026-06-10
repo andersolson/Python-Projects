@@ -8,5 +8,5 @@ def play_tone(frequency, duration, volume=0.25):
     sd.play(tone, samplerate)
     sd.wait()
 
-play_tone(frequency=440, duration=1)
+play_tone(frequency=440, duration=5)
 
