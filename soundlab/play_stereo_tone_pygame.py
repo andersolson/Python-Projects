@@ -3,7 +3,7 @@ import pygame
 
 pygame.mixer.init(frequency=44100, size=-16, channels=2)
 
-def play_stereo_tones(freq_left, freq_right, duration=1.0, volume=0.5):
+def play_stereo_tones(freq_left, freq_right, duration, volume=0.5):
     sample_rate = 44100
     t = np.linspace(0, duration, int(sample_rate * duration), False)
 
@@ -23,4 +23,4 @@ def play_stereo_tones(freq_left, freq_right, duration=1.0, volume=0.5):
     pygame.time.delay(int(duration * 1000))
 
 # Example: two different tones
-play_stereo_tones(440, 225, duration=2)
+play_stereo_tones(750, 225, duration=5)
