@@ -2,7 +2,7 @@ import numpy as np
 import wave
 
 def save_stereo_wav(filename, freq_left, freq_right, duration=1.0, volume=0.5):
-    sample_rate = 44100
+    sample_rate = 48000
     t = np.linspace(0, duration, int(sample_rate * duration), False)
 
     # Generate tones
@@ -24,4 +24,4 @@ def save_stereo_wav(filename, freq_left, freq_right, duration=1.0, volume=0.5):
         f.writeframes(stereo_audio.tobytes())
 
 # Example usage:
-save_stereo_wav("stereo_test.wav", 440, 225, duration=5.0)
+save_stereo_wav("delta_sample_10sec_150-152.wav", 150, 152, duration=10.0)
