@@ -31,3 +31,9 @@ This pair uses equal-tempered intervals and is very “easy” for long sessions
 **Right ear:** 540 Hz  
 **Beat frequency:** *40 Hz* 
 This is an upper-range gamma beat, often used for maximum cognitive activation.  
+
+## Other
+Acoustic stimulation can influence microbial growth and metabolism. Growth responses can be stimulated using these frequencies.  
+**225 Hz**  
+**750 Hz** *Strongest effect*
+Place, Raymond, Laura Kunz, Benedikt Sager, Jérémy Hentgen, and Silvio Wigger. 2026. "Application of Audible Acoustic Stimulation to Investigate Growth Responses in Three Pleurotus Species." *Journal of Microbiological Methods*. <https://www.sciencedirect.com/science/article/pii/S0167701226000059>
