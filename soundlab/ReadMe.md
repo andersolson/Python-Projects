@@ -12,7 +12,7 @@ To generate a binaural beat, simply keep the difference equal to the target brai
 **Left ear:** 240 Hz  
 **Right ear:** 258 Hz  
 **Beat frequency:** *18 Hz*  
-Good for: analytical tasks, problem‑solving, GIS data modeling, or detailed work.  
+**Good for:** analytical tasks, problem‑solving, GIS data modeling, or detailed work.  
 
 ## 3. High-Focus / Intense Concentration (Low Gamma ~32 Hz)
 **Left ear:** 400 Hz  
