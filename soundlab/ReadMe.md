@@ -39,9 +39,9 @@ All frequencies were played at **80 dB** for **300 seconds**:
 **225 Hz**  
 **750 Hz** *(Strongest effect)*  
 
-#### Test frequencies for Binaural stimulation
+### Test frequencies for Binaural stimulation
 Theta Wave 7 Hz Beat   
-**Left Ear:** 750 Hz
-**Right Ear:** 743 Hz
+**Left Ear:** 750 Hz  
+**Right Ear:** 743 Hz  
 
 Place, Raymond, Laura Kunz, Benedikt Sager, Jérémy Hentgen, and Silvio Wigger. 2026. "Application of Audible Acoustic Stimulation to Investigate Growth Responses in Three Pleurotus Species." *Journal of Microbiological Methods*. <https://www.sciencedirect.com/science/article/pii/S0167701226000059>
