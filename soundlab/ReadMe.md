@@ -33,14 +33,15 @@ This pair uses equal-tempered intervals and is very “easy” for long sessions
 This is an upper-range gamma beat, often used for maximum cognitive activation.  
 
 ## Other
-Acoustic stimulation can influence microbial growth and metabolism. Growth responses can be stimulated using these frequencies.  
+Acoustic stimulation can influence microbial growth and metabolism. Growth responses can be stimulated using these two frequencies as the carrier signal in a binaural set up.  
 
-All frequencies were played at **80 dB** for **300 seconds**:  
 **225 Hz**  
-**750 Hz** *(Strongest effect)*  
+**750 Hz** *(Strongest effect)*
 
-### Test frequencies for Binaural stimulation
-Theta Wave 7 Hz Beat   
+### Test frequencies for Binaural stimulation 
+Frequencies should be played at **80 dB** for **300 seconds (5 min)**
+
+Theta Wave 7 Hz Beat:   
 **Left Ear:** 750 Hz  
 **Right Ear:** 743 Hz  
 
