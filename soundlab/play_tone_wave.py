@@ -13,4 +13,4 @@ def generate_wav(filename, freq, duration=5.0, volume=0.5):
         f.setframerate(sample_rate)
         f.writeframes(audio.tobytes())
 
-generate_wav("tone440.wav", 440)
+generate_wav(r"C:\Users\is_olson\Music\freq50.wav", 50)
