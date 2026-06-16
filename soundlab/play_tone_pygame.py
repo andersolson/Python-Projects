@@ -17,4 +17,4 @@ def play_tone(freq, duration=5.0, volume=0.5):
     sound.play()
     pygame.time.delay(int(duration * 1000))
 
-play_tone(440)
+play_tone(50)
