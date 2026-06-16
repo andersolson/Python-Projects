@@ -24,4 +24,4 @@ def save_stereo_wav(filename, freq_left, freq_right, duration=1.0, volume=0.5):
         f.writeframes(stereo_audio.tobytes())
 
 # Example usage:
-save_stereo_wav(r"C:\Users\is_olson\Music\gamma_5min_50-150.wav", 50, 150, duration=300.0)
+save_stereo_wav(r"C:\Users\is_olson\Music\beta_v_5min_93-123.wav", 93, 123, duration=300.0)
