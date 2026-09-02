@@ -32,17 +32,33 @@ This pair uses equal-tempered intervals and is very “easy” for long sessions
 **Beat frequency:** *40 Hz* 
 This is an upper-range gamma beat, often used for maximum cognitive activation.  
 
-## Other
+## Other Auditory Studies
+
+### Fungi
 Acoustic stimulation can influence microbial growth and metabolism. Growth responses can be stimulated using these two frequencies as the carrier signal in a binaural set up.  
 
 **225 Hz**  
 **750 Hz** *(Strongest effect)*
 
-### Test frequencies for Binaural stimulation 
-Frequencies should be played at **80 dB** for **300 seconds (5 min)**
+#### Test frequencies for Binaural stimulation 
+Frequencies should be played at **80 dB** for **300 seconds (5 min)** for optimal hyphae stimulation
 
 Theta Wave 7 Hz Beat:   
 **Left Ear:** 750 Hz  
 **Right Ear:** 743 Hz  
 
 Place, Raymond, Laura Kunz, Benedikt Sager, Jérémy Hentgen, and Silvio Wigger. 2026. "Application of Audible Acoustic Stimulation to Investigate Growth Responses in Three Pleurotus Species." *Journal of Microbiological Methods*. <https://www.sciencedirect.com/science/article/pii/S0167701226000059>
+
+### Trees
+Scientists started listening to the sound of roots growing in a forest and discovered that the sound of roots crackling as they grew registered as 220Hz. Then roots of grass seedlings were exposed to a crackling sound at 220Hz, and they oriented their root tips in that direction to grow.
+
+Little is known about plant bioacoustics. Here, we present a rationale as to why the perception of sound and vibrations is likely to have also evolved in plants. We then explain how current evidence contributes to the view that plants may indeed benefit from mechanosensory mechanisms thus far unsuspected.
+
+#### Test frequencies for Binaural stimulation in the key of Tree
+Frequencies should be played at **80 dB** for **300 seconds (5 min)** for optimal hyphae stimulation
+
+Beta Wave 14 Hz Beat:   
+**Left Ear:** 220 Hz  
+**Right Ear:** 234 Hz
+
+Monica Gagliano, Stefano Mancuso, Daniel Robert, 2012 "Towards understanding plant bioacoustics" *Trends in Plant Science*. <https://www.sciencedirect.com/science/article/pii/S0167701226000059>
