@@ -46,7 +46,7 @@ Acoustic stimulation can influence microbial growth and metabolism. Growth respo
 **225 Hz**  
 **750 Hz** *(Strongest effect)*
 
-#### Test frequencies for Binaural stimulation in key of Fungi
+### Test frequencies for Binaural stimulation in the key of Fungi
 Frequencies should be played at **80 dB** for **300 seconds (5 min)** for optimal hyphae stimulation
 
 **Theta Wave 4 to 8 Hz Beat:**   
@@ -60,7 +60,7 @@ Scientists started listening to the sound of roots growing in a forest and disco
 
 Little is known about plant bioacoustics. Here, we present a rationale as to why the perception of sound and vibrations is likely to have also evolved in plants. We then explain how current evidence contributes to the view that plants may indeed benefit from mechanosensory mechanisms thus far unsuspected.
 
-#### Test frequencies for Binaural stimulation in the key of Tree
+### Test frequencies for Binaural stimulation in the key of Tree
 Frequencies should be played at **80 dB** for **300 seconds (5 min)** for optimal hyphae stimulation
 
 Beta Wave 14 Hz Beat:   
