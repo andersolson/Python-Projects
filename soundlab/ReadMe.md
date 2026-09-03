@@ -23,14 +23,20 @@ To generate a binaural beat, simply keep the difference equal to the target brai
 ## 4. Clean, Comfortable Listening Pair (Beta ~15 Hz)
 **Left ear:** 300 Hz  
 **Right ear:** 315 Hz  
-**Beat frequency:** *15 Hz* 
-This pair uses equal-tempered intervals and is very “easy” for long sessions.  
+**Beat frequency:** *15 Hz*  
+**Good for:** "Easy" long listening sessions. This pair uses equal-tempered intervals.  
 
 ## 5. High Clarity / Mental Sharpness (Gamma ~40 Hz)
 **Left ear:** 500 Hz  
 **Right ear:** 540 Hz  
-**Beat frequency:** *40 Hz* 
-This is an upper-range gamma beat, often used for maximum cognitive activation.  
+**Beat frequency:** *40 Hz*  
+**Good for:** This is an upper-range gamma beat, often used for maximum cognitive activation.
+
+## 6. Cognition / Creativity (Theta 4 Hz to 6 Hz)  
+**Left ear:** 220 Hz or 130 Hz   
+**Right ear:** 226 Hz or 135 Hz  
+**Beat frequency:** *6 Hz* or *5 Hz*  
+**Good for:** This is an upper-range Theta beat. Often used for enhanced memory recall, increased creative and intuitive states
 
 ## Other Auditory Studies
 
@@ -40,10 +46,10 @@ Acoustic stimulation can influence microbial growth and metabolism. Growth respo
 **225 Hz**  
 **750 Hz** *(Strongest effect)*
 
-#### Test frequencies for Binaural stimulation 
+#### Test frequencies for Binaural stimulation in key of Fungi
 Frequencies should be played at **80 dB** for **300 seconds (5 min)** for optimal hyphae stimulation
 
-Theta Wave 7 Hz Beat:   
+**Theta Wave 4 to 8 Hz Beat:**   
 **Left Ear:** 750 Hz  
 **Right Ear:** 743 Hz  
 
